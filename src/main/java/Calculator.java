@@ -4,4 +4,9 @@ public class Calculator {
 
       return opG+opD;
     }
+
+    public int divide(int opG, int opD){
+
+        return opD/opG;
+    } ;
 }
