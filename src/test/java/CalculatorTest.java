@@ -1,13 +1,24 @@
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 
 class CalculatorTest {
 
+    private Calculator calculer;
+
     @org.junit.jupiter.api.Test
+    @BeforeEach
+    void setUp(){ calculer = new Calculator();}
+
+    @AfterEach
+    void tearDown(){ calculer = null;}
+
+
     void add_devrait_calculer_la_somme_de_deux_int() {
 
         // GIVEN
-        Calculator calculer = new Calculator();
         int opG = 1;
         int opD = 2;
 
@@ -22,7 +33,6 @@ class CalculatorTest {
     void divide_devrait_diviser_deux_init() {
 
         // GIVEN
-        Calculator calculer = new Calculator();
         int opG = 1;
         int opD = 2;
 
