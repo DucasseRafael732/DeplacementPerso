@@ -8,22 +8,21 @@ class CalculatorTest {
 
     private Calculator calculer;
 
-    @org.junit.jupiter.api.Test
     @BeforeEach
-    void setUp(){ calculer = new Calculator();}
+    void setUp(){}
 
     @AfterEach
-    void tearDown(){ calculer = null;}
+    void tearDown(){}
 
-
-    void add_devrait_calculer_la_somme_de_deux_int() {
+    @org.junit.jupiter.api.Test
+    void add_devrait_avoir_la_somme_de_deux_int() {
 
         // GIVEN
         int opG = 1;
         int opD = 2;
 
         // WHEN
-        int resultat = calculer.add(opG,opD);
+        int resultat = Calculator.add(opG,opD);
 
         // THEN
         assertThat(resultat).isEqualTo(3);
@@ -37,7 +36,7 @@ class CalculatorTest {
         int opD = 2;
 
         // WHEN
-        int resultat = calculer.divide(opG,opD);
+        int resultat = Calculator.divide(opG,opD);
 
         // THEN
         assertThat(resultat).isEqualTo(2);
