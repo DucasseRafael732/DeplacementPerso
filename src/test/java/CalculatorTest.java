@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
@@ -14,7 +17,16 @@ class CalculatorTest {
     @AfterEach
     void tearDown(){}
 
-    @org.junit.jupiter.api.Test
+
+
+    @ParameterizedTest
+    @CsvSource({
+            "0, 1, 1",
+            "1, 2, 3",
+            "-2, 2, 0",
+            "0, 0, 0",
+            "-1, -2, -3",
+    })
     void add_devrait_avoir_la_somme_de_deux_int() {
 
         // GIVEN
