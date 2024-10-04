@@ -44,4 +44,6 @@ class PersonnageTest {
         assertThat(actualOrientation).isEqualTo(Orientation.NORD);
     }
 
+
+
 }

@@ -3,18 +3,19 @@ package com.rafael.Deplacementperso;
 public class Personnage {
 
     public Orientation tourner(int nbre){
-        if(nbre = 1){
-            return Orientation.EST;
-        }
 
-        if (nbre = 1){
-            return Orientation.SUD;
-        }
-        if (nbre = 1){
-            return Orientation.EST;
-        }
-        return Orientation.NORD;
+        for (int i = 0; i < nbre; i++) {
+            if(nbre == 1){
+                return Orientation.EST;
+            }
+            if(nbre == 2){
+                return Orientation.SUD;
+            }
+            if(nbre == 3){
+                return Orientation.OUEST;
+            }
 
-
+        }
+       return Orientation.NORD;
     }
 }
