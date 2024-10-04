@@ -6,46 +6,39 @@ public class Personnage {
 
         nbre = nbre % 4;
 
-        if (orientation == Orientation.NORD) {
-            if (nbre == 0) {
-                return Orientation.NORD;
-            } else if (nbre == 1) {
-                return Orientation.EST;
-            } else if (nbre == 2) {
-                return Orientation.SUD;
-            } else if (nbre == 3) {
-                return Orientation.OUEST;
-            }
-        } else if (orientation == Orientation.EST) {
-            if (nbre == 0) {
-                return Orientation.EST;
-            } else if (nbre == 1) {
-                return Orientation.SUD;
-            } else if (nbre == 2) {
-                return Orientation.OUEST;
-            } else if (nbre == 3) {
-                return Orientation.NORD;
-            }
-        } else if (orientation == Orientation.SUD) {
-            if (nbre == 0) {
-                return Orientation.SUD;
-            } else if (nbre == 1) {
-                return Orientation.OUEST;
-            } else if (nbre == 2) {
-                return Orientation.NORD;
-            } else if (nbre == 3) {
-                return Orientation.EST;
-            }
-        } else if (orientation == Orientation.OUEST) {
-            if (nbre == 0) {
-                return Orientation.OUEST;
-            } else if (nbre == 1) {
-                return Orientation.NORD;
-            } else if (nbre == 2) {
-                return Orientation.EST;
-            } else if (nbre == 3) {
-                return Orientation.SUD;
-            }
+        switch (orientation) {
+            case NORD:
+                switch (nbre) {
+                    case 0: return Orientation.NORD;
+                    case 1: return Orientation.EST;
+                    case 2: return Orientation.SUD;
+                    case 3: return Orientation.OUEST;
+                }
+                break;
+            case EST:
+                switch (nbre) {
+                    case 0: return Orientation.EST;
+                    case 1: return Orientation.SUD;
+                    case 2: return Orientation.OUEST;
+                    case 3: return Orientation.NORD;
+                }
+                break;
+            case SUD:
+                switch (nbre) {
+                    case 0: return Orientation.SUD;
+                    case 1: return Orientation.OUEST;
+                    case 2: return Orientation.NORD;
+                    case 3: return Orientation.EST;
+                }
+                break;
+            case OUEST:
+                switch (nbre) {
+                    case 0: return Orientation.OUEST;
+                    case 1: return Orientation.NORD;
+                    case 2: return Orientation.EST;
+                    case 3: return Orientation.SUD;
+                }
+                break;
         }
 
         return null;
