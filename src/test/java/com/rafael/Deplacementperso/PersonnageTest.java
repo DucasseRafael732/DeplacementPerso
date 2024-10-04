@@ -44,7 +44,6 @@ class PersonnageTest {
         assertThat(actualOrientation).isEqualTo(Orientation.NORD);
     }
 
-
     @Test
     void quand_orientation_OUEST_tourner_1_devrait_orienter_vers_NORD(){
         Personnage avatar = new Personnage();
@@ -54,4 +53,21 @@ class PersonnageTest {
         assertThat(actualOrientation).isEqualTo(Orientation.NORD);
     }
 
+    @Test
+    void quand_orientation_SUD_tourner_1_devrait_orienter_vers_OUEST(){
+        Personnage avatar = new Personnage();
+
+        Orientation actualOrientation =avatar.tourner(1,Orientation.SUD);
+
+        assertThat(actualOrientation).isEqualTo(Orientation.OUEST);
+    }
+
+    @Test
+    void quand_orientation_EST_tourner_1_devrait_orienter_vers_SUD(){
+        Personnage avatar = new Personnage();
+
+        Orientation actualOrientation =avatar.tourner(1,Orientation.EST);
+
+        assertThat(actualOrientation).isEqualTo(Orientation.SUD);
+    }
 }
