@@ -44,6 +44,15 @@ class PersonnageTest {
         assertThat(actualOrientation).isEqualTo(Orientation.NORD);
     }
 
+    @Test
+    void quand_orientation_NORD_tourner_5_devrait_orienter_vers_EST(){
+        Personnage avatar = new Personnage();
+
+        Orientation actualOrientation =avatar.tourner(5);
+
+        assertThat(actualOrientation).isEqualTo(Orientation.EST);
+    }
+
 
 
 }
